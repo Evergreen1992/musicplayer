@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#1B1B1B"
+    android:orientation="vertical" >
+
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        
+	    <TextView
+	        android:id="@+id/info"
+	        android:layout_width="40pt"
+	        android:layout_height="30pt"
+	        android:text="@string/hint"
+	        android:textColor="@android:color/white"
+	        android:gravity="center_vertical"
+	        android:textSize="15sp"
+	        
+	        android:singleLine="true"
+	        android:ellipsize="marquee" 
+	        android:marqueeRepeatLimit="marquee_forever"
+	        android:focusable="true"
+	        android:focusableInTouchMode="true"
+	        />
+	
+	    <ListView
+	        android:id="@+id/list_view"
+	        android:layout_width="fill_parent"
+	        android:layout_height="180pt"
+	        android:textSize="15sp"
+	        android:dividerHeight="0.1pt"
+	        android:divider="#2A2A2A"
+	        />
+
+	</LinearLayout>
+	    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/before"
+            android:layout_width="25pt"
+            android:layout_height="25pt"
+            android:background="@drawable/before"
+            android:onClick="musicPlay" />
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="25pt"
+            android:layout_height="25pt"
+            android:background="@drawable/pause"
+            android:onClick="musicPlay" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="25pt"
+            android:layout_height="25pt"
+            android:background="@drawable/next"
+            android:onClick="musicPlay" />
+    </LinearLayout>
+    
+    <LinearLayout 
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:gravity="left"
+     android:orientation="vertical" 
+     >
+	    <SeekBar
+	        android:id="@+id/seekbar"
+	        android:progressDrawable="@drawable/seek_drawable"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" 
+	        />
+	    
+	 </LinearLayout>
+	 
+     <LinearLayout 
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:gravity="left"
+     android:orientation="horizontal" 
+     >
+	    <!--当前播放的实现显示  -->
+	    <TextView 
+	    android:id="@+id/currenttime"
+        android:layout_width="wrap_content"
+        android:layout_height="10pt"
+        android:text="@string/currenttime"
+        android:textColor="@android:color/white"
+        android:gravity="left"
+        android:textSize="15sp"
+	    />
+	 </LinearLayout>
+	 
+</LinearLayout>

@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    >
+        
+        
+       <Button
+       android:id="@+id/return_main_button" 
+       android:layout_width="20pt"
+       android:layout_height="20pt"
+       android:onClick="setting"
+       android:background="@drawable/return_btn"
+    	/>
+		
+       <TextView 
+       android:id="@+id/current_song" 
+       android:layout_width="100pt"
+       android:layout_height="wrap_content"
+       android:textColor="#FFFFFF"
+       android:textSize="10pt"
+       android:text="The Saltwater Room"
+       
+       android:singleLine="true"
+       android:ellipsize="marquee" 
+       android:marqueeRepeatLimit="marquee_forever"
+       android:focusable="true"
+       android:focusableInTouchMode="true"
+           />
+       
+    </LinearLayout>
+
+    <com.player.view.LricView
+        android:id="@+id/lric_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        />
+</LinearLayout>
